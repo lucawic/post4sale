@@ -1,6 +1,6 @@
 import { Grid, CircularProgress } from '@material-ui/core'
 import Post from './Post/Post';
-import useStyles from './styles';
+import useStyles from '../../styles';
 
 const Posts = () => {
     const posts = useSelector((state) => state.posts);
