@@ -15,8 +15,7 @@ const initialState = { firstName: '', lastName: '', email: '', password: '', con
 
 const SignUp = () => {
   const [form, setForm] = useState(initialState);
-  // const [isSignup, setIsSignup] = useState(false);
-  const [isSignup] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
   const classes = useStyles();
@@ -24,20 +23,22 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => setShowPassword(!showPassword);
 
-  // const switchMode = () => {
-  //   setForm(initialState);
-  //   setIsSignup((prevIsSignup) => !prevIsSignup);
-  //   setShowPassword(false);
-  // };
+  const switchMode = () => {
+    setForm(initialState);
+    setIsSignup((prevIsSignup) => !prevIsSignup);
+    setShowPassword(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (isSignup) {
-      dispatch(signup(form, history));
-    } else {
-      dispatch(signin(form, history));
-    }
+    console.log(form);
+
+    // if (isSignup) {
+    //   dispatch(signup(form, history));
+    // } else {
+    //   dispatch(signin(form, history));
+    // }
   };
 
   // const googleSuccess = async (res) => {
@@ -89,14 +90,14 @@ const SignUp = () => {
             onSuccess={googleSuccess}
             onFailure={googleError}
             cookiePolicy="single_host_origin"
-          />
-          <Grid container justifyContent="flex-end">
+          /> */}
+          <Grid container justify="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
                 { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
               </Button>
             </Grid>
-          </Grid> */}
+          </Grid>
         </form>
       </Paper>
     </Container>
