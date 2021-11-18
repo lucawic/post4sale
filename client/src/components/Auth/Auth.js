@@ -34,11 +34,13 @@ const SignUp = () => {
 
     console.log(form);
 
+
     if (isSignup) {
       dispatch(signup(form, history));
     } else {
       dispatch(signin(form, history));
     }
+
   };
 
   // const googleSuccess = async (res) => {
