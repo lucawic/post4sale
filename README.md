@@ -25,7 +25,7 @@ Launch locally...
 
 or
 
-visit thinks below to navigate to our live pages on Heroku (and Netlify)!
+visit the links below to navigate to our live pages on Heroku (and Netlify)!
 
 ## Tests
 No testing Only Link. Enjoy
