@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
+// import { GoogleLogin } from 'react-google-login';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
-import Icon from './icon';
+// import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
-import { AUTH } from '../../constants/actionTypes';
+// import { AUTH } from '../../constants/actionTypes';
 import useStyles from './styles';
 import Input from './Input';
 
@@ -39,20 +39,20 @@ const SignUp = () => {
     }
   };
 
-  const googleSuccess = async (res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
+  // const googleSuccess = async (res) => {
+  //   const result = res?.profileObj;
+  //   const token = res?.tokenId;
 
-    try {
-      dispatch({ type: AUTH, data: { result, token } });
+  //   try {
+  //     dispatch({ type: AUTH, data: { result, token } });
 
-      history.push('/');
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //     history.push('/');
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  const googleError = () => alert('Google Sign In was unsuccessful. Try again later');
+  // const googleError = () => alert('Google Sign In was unsuccessful. Try again later');
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -78,8 +78,8 @@ const SignUp = () => {
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
-          <GoogleLogin
-            clientId="564033717568-e5p23rhvcs4i6kffgsbci1d64r8hp6fn.apps.googleusercontent.com"
+          {/* <GoogleLogin
+            clientId="419267755104-o6psnq2qo64homu6pjfai9ki3443cnu7.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In
@@ -88,7 +88,7 @@ const SignUp = () => {
             onSuccess={googleSuccess}
             onFailure={googleError}
             cookiePolicy="single_host_origin"
-          />
+          /> */}
           <Grid container justify="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
