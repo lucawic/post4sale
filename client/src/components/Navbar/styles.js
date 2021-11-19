@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     borderRadius: 15,
     margin: '30px 0',
     display: 'flex',
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
